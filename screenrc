@@ -1,0 +1,49 @@
+##OLD screen config
+#hardstatus on
+#hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w%< %= %{w}%D %M %d %C%a"
+#multiuser on
+###############################
+##NEW screen config starts here:
+hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w%< %= %{w}%D %M %d %C%a"
+defutf8 on
+defscrollback 30000
+altscreen on
+shelltitle "$ |bash"
+
+startup_message off
+#visul bell off (screen doesn't flickr)
+vbell off
+autodetach on
+pow_detach_msg "Screen session of $FULLNAME $:cr:$:nl:ended."
+# If a window goes unresponsive, don't block the whole session waiting for it.
+# nonblock on
+# defflow off
+# ##    Keybindings    ##
+# #
+# ## bind <F7> to detach screen from this terminal
+# ## bind <F8> to kill current session
+# ## bind <F10> to create a new screen
+# ## bind <F9> to rename an existing window
+# ## bind <F11> to move to previous window
+# ## bind <F12> to move to next window
+ bindkey -k k7 detach
+ bindkey -k k8 kill
+ bindkey -k k; screen
+ bindkey -k k9 title
+ bindkey -k F1 prev
+ bindkey -k F2 next
+# #caption always "%{= kw}%?%-Lw%?%{+b kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
+#
+#
+# # Default screens
+
+# screen -t cspki         1
+# screen -t nocp2         2
+# screen -t nocp3         3
+# screen -t nocp4         4
+# screen -t nocp5         5
+# screen -t f15-dogtag    6
+# screen -t neptune       7
+# screen -t uranus        8
